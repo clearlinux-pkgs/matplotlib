@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 1.5.3
-Release  : 4
+Release  : 5
 URL      : https://github.com/matplotlib/matplotlib/archive/v1.5.3.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v1.5.3.tar.gz
 Summary  : No detailed summary available
