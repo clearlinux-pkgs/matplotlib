@@ -4,13 +4,19 @@
 #
 Name     : matplotlib
 Version  : 2.0.0
-Release  : 8
+Release  : 9
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.0.0.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.0.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-1.1 BSD-3-Clause HPND MIT NCSA OFL-1.0 OFL-1.1 Python-2.0 Qhull
 Requires: matplotlib-python
+Requires: cycler
+Requires: numpy
+Requires: pyparsing
+Requires: python-dateutil
+Requires: pytz
+Requires: six
 BuildRequires : cairo-dev
 BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
@@ -52,12 +58,12 @@ python components for the matplotlib package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1486135520
+export SOURCE_DATE_EPOCH=1487881680
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1486135520
+export SOURCE_DATE_EPOCH=1487881680
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
