@@ -11,3 +11,4 @@ nose
 python-dateutil
 pyparsing
 gtk+-dev
+python-tcl

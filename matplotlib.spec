@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 2.0.0
-Release  : 11
+Release  : 12
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.0.0.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.0.0.tar.gz
 Summary  : No detailed summary available
@@ -16,6 +16,7 @@ Requires: functools32
 Requires: numpy
 Requires: pyparsing
 Requires: python-dateutil
+Requires: python-tcl
 Requires: pytz
 Requires: six
 BuildRequires : cairo-dev
@@ -33,6 +34,7 @@ BuildRequires : pyparsing
 BuildRequires : pytest
 BuildRequires : python-dateutil
 BuildRequires : python-dev
+BuildRequires : python-tcl
 BuildRequires : python3-dev
 BuildRequires : pytz
 BuildRequires : setuptools
@@ -59,12 +61,12 @@ python components for the matplotlib package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1488029161
+export SOURCE_DATE_EPOCH=1488034892
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1488029161
+export SOURCE_DATE_EPOCH=1488034892
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
