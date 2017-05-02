@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 2.0.1
-Release  : 15
+Release  : 16
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.0.1.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.0.1.tar.gz
 Summary  : No detailed summary available
