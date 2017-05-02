@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 2.0.1
-Release  : 16
+Release  : 16.1
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.0.1.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.0.1.tar.gz
 Summary  : No detailed summary available
@@ -12,7 +12,9 @@ Group    : Development/Tools
 License  : Apache-1.1 BSD-3-Clause HPND MIT NCSA OFL-1.0 OFL-1.1 Python-2.0 Qhull
 Requires: matplotlib-python
 Requires: functools32
+Requires: cycler
 Requires: python-tcl
+
 BuildRequires : cairo-dev
 BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
