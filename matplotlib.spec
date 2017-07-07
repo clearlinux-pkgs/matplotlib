@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 2.0.2
-Release  : 18
+Release  : 19
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.0.2.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.0.2.tar.gz
 Summary  : No detailed summary available
@@ -13,6 +13,7 @@ License  : Apache-1.1 BSD-3-Clause HPND MIT NCSA OFL-1.0 OFL-1.1 Python-2.0 Qhul
 Requires: matplotlib-python
 Requires: cycler
 Requires: functools32
+Requires: pyparsing
 Requires: python-tcl
 BuildRequires : cairo-dev
 BuildRequires : freetype-dev
@@ -59,12 +60,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1494469332
+export SOURCE_DATE_EPOCH=1499447645
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1494469332
+export SOURCE_DATE_EPOCH=1499447645
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
