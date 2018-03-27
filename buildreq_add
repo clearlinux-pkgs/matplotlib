@@ -14,3 +14,4 @@ gtk+-dev
 python-tcl
 setuptools-python
 setuptools-legacypython
+kiwisolver
