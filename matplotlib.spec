@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 2.2.2
-Release  : 33
+Release  : 34
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Summary  : No detailed summary available
@@ -37,7 +37,6 @@ BuildRequires : python-tcl
 BuildRequires : python3-dev
 BuildRequires : pytz
 BuildRequires : setuptools
-BuildRequires : setuptools-legacypython
 BuildRequires : setuptools-python
 BuildRequires : tornado
 BuildRequires : tox
@@ -75,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522283703
+export SOURCE_DATE_EPOCH=1523554983
 python3 setup.py build -b py3
 
 %install
