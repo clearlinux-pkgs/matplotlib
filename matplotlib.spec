@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 2.2.2
-Release  : 36
+Release  : 37
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Summary  : No detailed summary available
@@ -16,7 +16,6 @@ Requires: cycler
 Requires: functools32
 Requires: kiwisolver
 Requires: pyparsing
-Requires: python-tcl
 BuildRequires : cairo-dev
 BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
@@ -48,6 +47,14 @@ About Matplotlib Testing Infrastructure
 Information on the testing infrastructure is provided in
 the Testing section of the Matplotlib Developersâ Guide:
 
+%package extras
+Summary: extras components for the matplotlib package.
+Group: Default
+
+%description extras
+extras components for the matplotlib package.
+
+
 %package python
 Summary: python components for the matplotlib package.
 Group: Default
@@ -74,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523554983
+export SOURCE_DATE_EPOCH=1528479176
 python3 setup.py build -b py3
 
 %install
@@ -87,9 +94,14 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
+%files extras
+%defattr(-,root,root,-)
+/usr/lib/python3.6/site-packages/matplotlib/backends/_backend_tk.py
+
 %files python
 %defattr(-,root,root,-)
 
 %files python3
 %defattr(-,root,root,-)
+%exclude /usr/lib/python3.6/site-packages/matplotlib/backends/_backend_tk.py
 /usr/lib/python3*/*
