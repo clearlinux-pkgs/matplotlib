@@ -31,7 +31,7 @@ BuildRequires : py-python
 BuildRequires : pyparsing
 BuildRequires : pytest
 BuildRequires : python-dateutil
-BuildRequires : python-dev
+
 BuildRequires : python-tcl
 BuildRequires : python3-dev
 BuildRequires : pytz
