@@ -4,13 +4,14 @@
 #
 Name     : matplotlib
 Version  : 2.2.2
-Release  : 40
+Release  : 41
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-1.1 BSD-3-Clause HPND MIT NCSA OFL-1.0 OFL-1.1 Python-2.0 Qhull
 Requires: matplotlib-python3
+Requires: matplotlib-license
 Requires: matplotlib-python
 Requires: cycler
 Requires: functools32
@@ -31,7 +32,6 @@ BuildRequires : py-python
 BuildRequires : pyparsing
 BuildRequires : pytest
 BuildRequires : python-dateutil
-
 BuildRequires : python-tcl
 BuildRequires : python3-dev
 BuildRequires : pytz
@@ -47,12 +47,20 @@ About Matplotlib Testing Infrastructure
 Information on the testing infrastructure is provided in
 the Testing section of the Matplotlib Developersâ Guide:
 
-%package extras
-Summary: extras components for the matplotlib package.
+%package doc
+Summary: doc components for the matplotlib package.
+Group: Documentation
+
+%description doc
+doc components for the matplotlib package.
+
+
+%package license
+Summary: license components for the matplotlib package.
 Group: Default
 
-%description extras
-extras components for the matplotlib package.
+%description license
+license components for the matplotlib package.
 
 
 %package python
@@ -81,11 +89,27 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528479176
+export SOURCE_DATE_EPOCH=1530375701
 python3 setup.py build -b py3
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/matplotlib
+cp lib/matplotlib/mpl-data/fonts/ttf/LICENSE_DEJAVU %{buildroot}/usr/share/doc/matplotlib/lib_matplotlib_mpl-data_fonts_ttf_LICENSE_DEJAVU
+cp extern/libqhull/COPYING.txt %{buildroot}/usr/share/doc/matplotlib/extern_libqhull_COPYING.txt
+cp extern/agg24-svn/src/copying %{buildroot}/usr/share/doc/matplotlib/extern_agg24-svn_src_copying
+cp doc/users/license.rst %{buildroot}/usr/share/doc/matplotlib/doc_users_license.rst
+cp LICENSE/pnpoly.license %{buildroot}/usr/share/doc/matplotlib/LICENSE_pnpoly.license
+cp LICENSE/LICENSE_enthought.txt %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_enthought.txt
+cp LICENSE/LICENSE_YORICK %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_YORICK
+cp LICENSE/LICENSE_QT4_EDITOR %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_QT4_EDITOR
+cp LICENSE/LICENSE_JQUERY %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_JQUERY
+cp LICENSE/LICENSE_CONDA %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_CONDA
+cp LICENSE/LICENSE_COLORBREWER %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_COLORBREWER
+cp LICENSE/LICENSE_BAKOMA %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_BAKOMA
+cp LICENSE/LICENSE_AMSFONTS %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE_AMSFONTS
+cp LICENSE/LICENSE.PIL %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE.PIL
+cp LICENSE/LICENSE %{buildroot}/usr/share/doc/matplotlib/LICENSE_LICENSE
 python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -94,14 +118,30 @@ echo ----[ mark ]----
 %files
 %defattr(-,root,root,-)
 
-%files extras
+%files doc
+%defattr(0644,root,root,0755)
+%doc /usr/share/doc/matplotlib/*
+
+%files license
 %defattr(-,root,root,-)
-/usr/lib/python3.6/site-packages/matplotlib/backends/_backend_tk.py
+/usr/share/doc/matplotlib/LICENSE_LICENSE
+/usr/share/doc/matplotlib/LICENSE_LICENSE.PIL
+/usr/share/doc/matplotlib/LICENSE_LICENSE_AMSFONTS
+/usr/share/doc/matplotlib/LICENSE_LICENSE_BAKOMA
+/usr/share/doc/matplotlib/LICENSE_LICENSE_COLORBREWER
+/usr/share/doc/matplotlib/LICENSE_LICENSE_CONDA
+/usr/share/doc/matplotlib/LICENSE_LICENSE_JQUERY
+/usr/share/doc/matplotlib/LICENSE_LICENSE_QT4_EDITOR
+/usr/share/doc/matplotlib/LICENSE_LICENSE_YORICK
+/usr/share/doc/matplotlib/LICENSE_LICENSE_enthought.txt
+/usr/share/doc/matplotlib/LICENSE_pnpoly.license
+/usr/share/doc/matplotlib/doc_users_license.rst
+/usr/share/doc/matplotlib/extern_libqhull_COPYING.txt
+/usr/share/doc/matplotlib/lib_matplotlib_mpl-data_fonts_ttf_LICENSE_DEJAVU
 
 %files python
 %defattr(-,root,root,-)
 
 %files python3
 %defattr(-,root,root,-)
-%exclude /usr/lib/python3.6/site-packages/matplotlib/backends/_backend_tk.py
 /usr/lib/python3*/*
