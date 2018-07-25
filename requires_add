@@ -2,6 +2,6 @@
 # picked up automatically. One name per line, no whitespace.
 cycler
 functools32
-pyparsing
-#python-tcl
 kiwisolver
+pyparsing
+python-dateutil
