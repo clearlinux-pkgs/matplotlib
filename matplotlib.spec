@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 2.2.2
-Release  : 45
+Release  : 46
 URL      : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v2.2.2.tar.gz
 Summary  : No detailed summary available
@@ -17,6 +17,8 @@ Requires: cycler
 Requires: functools32
 Requires: kiwisolver
 Requires: pyparsing
+Requires: python-dateutil
+BuildRequires : buildreq-distutils3
 BuildRequires : cairo-dev
 BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
@@ -89,7 +91,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530375701
+export SOURCE_DATE_EPOCH=1532620104
 python3 setup.py build -b py3
 
 %install
