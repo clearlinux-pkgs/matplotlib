@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 3.0.2
-Release  : 50
+Release  : 51
 URL      : https://github.com/matplotlib/matplotlib/archive/v3.0.2.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v3.0.2.tar.gz
 Summary  : No detailed summary available
