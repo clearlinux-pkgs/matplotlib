@@ -4,7 +4,7 @@
 #
 Name     : matplotlib
 Version  : 3.0.2
-Release  : 53
+Release  : 54
 URL      : https://github.com/matplotlib/matplotlib/archive/v3.0.2.tar.gz
 Source0  : https://github.com/matplotlib/matplotlib/archive/v3.0.2.tar.gz
 Summary  : No detailed summary available
@@ -14,12 +14,12 @@ Requires: matplotlib-license = %{version}-%{release}
 Requires: matplotlib-python = %{version}-%{release}
 Requires: matplotlib-python3 = %{version}-%{release}
 Requires: cycler
-Requires: functools32
 Requires: kiwisolver
 Requires: pyparsing
 Requires: python-dateutil
 BuildRequires : buildreq-distutils3
 BuildRequires : cairo-dev
+BuildRequires : cycler
 BuildRequires : freetype-dev
 BuildRequires : gtk+-dev
 BuildRequires : gtk3-dev
@@ -40,10 +40,10 @@ BuildRequires : tox
 BuildRequires : virtualenv
 
 %description
-About Matplotlib Testing Infrastructure
----------------------------------------
-Information on the testing infrastructure is provided in
-the Testing section of the Matplotlib Developersâ Guide:
+Matplotlib examples
+===================
+There are a variety of ways to use Matplotlib, and most of them are
+illustrated in the examples in this directory.
 
 %package license
 Summary: license components for the matplotlib package.
@@ -78,11 +78,18 @@ python3 components for the matplotlib package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1541867463
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1570483755
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/matplotlib
 cp LICENSE/LICENSE %{buildroot}/usr/share/package-licenses/matplotlib/LICENSE_LICENSE
