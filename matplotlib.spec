@@ -6,7 +6,7 @@
 #
 Name     : matplotlib
 Version  : 3.2.0
-Release  : 56
+Release  : 57
 URL      : https://files.pythonhosted.org/packages/be/06/81367951cc50695830482eacefdc8289c68770db166a4d4283e7eac22dee/matplotlib-3.2.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/be/06/81367951cc50695830482eacefdc8289c68770db166a4d4283e7eac22dee/matplotlib-3.2.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/be/06/81367951cc50695830482eacefdc8289c68770db166a4d4283e7eac22dee/matplotlib-3.2.0.tar.gz.asc
