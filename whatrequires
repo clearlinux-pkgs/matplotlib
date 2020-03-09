@@ -1,3 +1,11 @@
 # This file contains recursive sources that require this package
 FreeCAD
+PyWavelets
+networkx
 nltk
+pyside2-setup
+scikit-image
+scikit-learn
+scipy
+seaborn
+subunit2sql
