@@ -1,5 +1,5 @@
 PKG_NAME := matplotlib
-URL = https://files.pythonhosted.org/packages/be/06/81367951cc50695830482eacefdc8289c68770db166a4d4283e7eac22dee/matplotlib-3.2.0.tar.gz
+URL = https://files.pythonhosted.org/packages/4a/30/eb8e7dd8e3609f05c6920fa82f189302c832e5a0f6667aa96f952056bc0c/matplotlib-3.2.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
