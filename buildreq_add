@@ -15,3 +15,5 @@ python-tcl
 setuptools-python
 kiwisolver
 python-dateutil
+Pillow
+qhull-dev
