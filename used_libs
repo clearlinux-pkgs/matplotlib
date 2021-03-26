@@ -4,5 +4,5 @@ libfreetype.so.6
 libgcc_s.so.1
 libm.so.6
 libpthread.so.0
-libqhull.so.7
+libqhull_r.so.7
 libstdc++.so.6
