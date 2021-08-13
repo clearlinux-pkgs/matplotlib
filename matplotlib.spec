@@ -22,6 +22,7 @@ Requires: kiwisolver
 Requires: numpy
 Requires: pyparsing
 Requires: python-dateutil
+Provides: pypi(matplotlib)
 BuildRequires : Pillow
 BuildRequires : buildreq-distutils3
 BuildRequires : cairo-dev
