@@ -1,11 +1,11 @@
 # This file contains recursive sources that require this package
 FreeCAD
 PyWavelets
+gst-python
 networkx
 nltk
 pyside2-setup
 scikit-image
 scikit-learn
-scipy
 seaborn
 tifffile
