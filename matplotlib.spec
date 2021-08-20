@@ -6,7 +6,7 @@
 #
 Name     : matplotlib
 Version  : 3.4.3
-Release  : 75
+Release  : 76
 URL      : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz.asc
@@ -22,7 +22,6 @@ Requires: kiwisolver
 Requires: numpy
 Requires: pyparsing
 Requires: python-dateutil
-Provides: pypi(matplotlib)
 BuildRequires : Pillow
 BuildRequires : buildreq-distutils3
 BuildRequires : cairo-dev
@@ -40,7 +39,7 @@ BuildRequires : py-python
 BuildRequires : pyparsing
 BuildRequires : pytest
 BuildRequires : python-dateutil
-BuildRequires : python-tcl
+BuildRequires : python3-tcl
 BuildRequires : pytz
 BuildRequires : qhull-dev
 BuildRequires : setuptools-python
@@ -74,6 +73,7 @@ python components for the matplotlib package.
 Summary: python3 components for the matplotlib package.
 Group: Default
 Requires: python3-core
+Provides: pypi(matplotlib)
 
 %description python3
 python3 components for the matplotlib package.
@@ -93,7 +93,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628867776
+export SOURCE_DATE_EPOCH=1629434371
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -108,6 +108,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/matplotlib
 cp %{_builddir}/matplotlib-3.4.3/LICENSE/LICENSE %{buildroot}/usr/share/package-licenses/matplotlib/3683efd59fb44e798efb22fd086a5b1e3a0aa700
 cp %{_builddir}/matplotlib-3.4.3/LICENSE/LICENSE_AMSFONTS %{buildroot}/usr/share/package-licenses/matplotlib/91cf189e02755085234dd321326345846bf2949f
+cp %{_builddir}/matplotlib-3.4.3/LICENSE/LICENSE_BAKOMA %{buildroot}/usr/share/package-licenses/matplotlib/9fa4f855f33fa4ed73c9e6865d534a4f0f910610
 cp %{_builddir}/matplotlib-3.4.3/LICENSE/LICENSE_COLORBREWER %{buildroot}/usr/share/package-licenses/matplotlib/47a57a5629a135f4301bf8181c5e244e1baf5759
 cp %{_builddir}/matplotlib-3.4.3/LICENSE/LICENSE_JSXTOOLS_RESIZE_OBSERVER %{buildroot}/usr/share/package-licenses/matplotlib/920b5b7e7e79918ab41e714c4002f3ad4a8fdcfc
 cp %{_builddir}/matplotlib-3.4.3/LICENSE/LICENSE_QT4_EDITOR %{buildroot}/usr/share/package-licenses/matplotlib/04bb73e33817fa6c0c1259344f7326b408e12885
@@ -136,6 +137,7 @@ echo ----[ mark ]----
 /usr/share/package-licenses/matplotlib/91cf189e02755085234dd321326345846bf2949f
 /usr/share/package-licenses/matplotlib/920b5b7e7e79918ab41e714c4002f3ad4a8fdcfc
 /usr/share/package-licenses/matplotlib/96cdc9c40477ab698d63b8c83fab29e2a8f72527
+/usr/share/package-licenses/matplotlib/9fa4f855f33fa4ed73c9e6865d534a4f0f910610
 /usr/share/package-licenses/matplotlib/b3dd311f3c9b252fef52c78c4b6337203c0084a3
 /usr/share/package-licenses/matplotlib/fd0bb2832315e88d7a06dd4f28a73f4eac46d3c6
 

@@ -11,7 +11,7 @@ nose
 python-dateutil
 pyparsing
 gtk+-dev
-python-tcl
+python3-tcl
 setuptools-python
 kiwisolver
 python-dateutil
