@@ -6,7 +6,7 @@
 #
 Name     : matplotlib
 Version  : 3.4.3
-Release  : 78
+Release  : 79
 URL      : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/21/37/197e68df384ff694f78d687a49ad39f96c67b8d75718bc61503e1676b617/matplotlib-3.4.3.tar.gz.asc
@@ -34,6 +34,7 @@ BuildRequires : kiwisolver
 BuildRequires : libpng-dev
 BuildRequires : nose
 BuildRequires : numpy
+BuildRequires : numpy-python
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pyparsing
@@ -93,7 +94,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1629434371
+export SOURCE_DATE_EPOCH=1635461963
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
